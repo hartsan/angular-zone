@@ -1148,7 +1148,7 @@ const Zone: ZoneType = (function(global: any) {
       let fetchPromise: Promise<any>;
       try {
         // In MS Edge this throws
-        fetchPromise = global['fetch']();
+        fetchPromise = global['fetch']('');
       } catch (e) {
         // In Chrome this throws instead.
         fetchPromise = global['fetch']('about:blank');
